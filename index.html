@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+gap: 25px;       
+        width: 50%;
+        margin: auto;
+        height: 95vh;
+        background-color: burlywood;
+
+    }
+    .box1 img{
+        width: 100%;
+        height: 45vh;
+        border-radius: 12px;
+
+    }
+    .box1{
+width: 60%;
+height: 45vh;
+margin: auto;
+border-radius: 12px;
+
+    }
+    .box2{
+        border: 1px solid rgba(162, 155, 155, 0);
+width: 60%;
+height: 30vh;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 93px;
+background-color: chocolate;
+border-radius: 12px;
+color: aliceblue;
+    }
+   
+    button {
+        padding: 12px;
+        border: none;
+        
+        width: 20%;
+        height: 5vh;
+        background-color: brown;
+        color: wheat;
+        border-radius: 12px;
+margin: auto;  
+
+    }
+       
+    button:hover {
+        padding: 12px;
+        border: none;
+        
+        width: 20%;
+        height: 5vh;
+        background-color: rgb(42, 38, 38);
+        color: wheat;
+        border-radius: 12px;
+  
+
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="box1"><img src="dice-1.png" alt=""></div>
+    <div class="box2"><h2>1</h2></div>
+   <button onclick="roll()">Roll</button>
+</div>
+
+    
+
+
+
+</body>
+<script>
+    let img = document.querySelector(".box1");
+
+function roll(){
+let rnd = Math.random()* 6 + 1;
+let nodec = Math.trunc(rnd);
+document.querySelector(".box2").textContent= nodec;
+img.src = `dice-${nodec}.png`;
+
+}
+// let score = score + nodec;
+// console.log(score);
+// document.querySelector("")
+
+
+</script>
+</html>
